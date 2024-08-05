@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/transaction.css">
+    <script defer src="./scripts/transaction.js"></script>
+    <title>Transactions</title>
+</head>
+<body>
+    <div class="new-container-overlay">
+        <div class="container">
+
+            <div class="header">
+                <div class="leftSide">
+                    <a href="./index.html"><img src="./asset/logo.png" alt="logo" width="150px"></a>
+                </div>
+    
+                <div class="rightSide" id="rightHeader">
+                    <!-- <p id="greetings">Hello User</p> -->
+                </div>
+            </div>
+    
+    
+            
+            <div id="main-screen" class="section">
+    
+                <h1>Choose a Transaction to continue</h1>
+                <p>Press Exit All to end all transaction</p>
+    
+                <div class="options">
+                    <button onclick="showScreen('quick-transfer')">Quick Transfer</button>
+                    <button onclick="showScreen('check-balance')">Check Balance</button>
+                    <button onclick="showScreen('cash-withdrawal')">Cash Withdrawal</button>
+                    <button onclick="showScreen('cash-deposit')">Cash Deposit</button>
+                    <button onclick="showScreen('quickteller')">Quickteller</button>
+                    <button onclick="showScreen('change-password')">Change Password</button>
+    
+                    
+                </div>
+    
+    
+            </div>
+    
+            <div id="quick-transfer-screen" class="section screen">
+                <h1>Enter Transfer Details Below</h1>
+                
+                <div style="text-align: center;">
+                    <input style="margin: 0;" type="text" name="name" id="name-input" placeholder="Recipient Account Name" class="acct-no">
+                </div>
+    
+                <div style="text-align: center;">
+                    <input type="number" name="amount" id="amount-input" placeholder="Amount" class="amount">
+                </div>
+                 
+    
+                <button onclick="showScreen('main')">Back</button>
+                <button id="sendButton">Send</button>
+                <p style="margin-top: 3rem; font-size: 2.5rem; font-family: monospace;" class="hide" id="message">send</p>
+            </div>
+    
+    
+    
+    
+    
+    
+            <div id="check-balance-screen" class="section screen">
+    
+                <h1>Your Available balance is:</h1>  
+    
+                <div class="bal green" id="bal">
+    
+                    <h2 style="margin: 0;" id="accountBalance">0.00</h2>
+    
+                </div>
+    
+                <div style="text-align: center;">
+                    <button onclick="showScreen('main')">Back</button>
+                </div>
+                
+            </div>
+    
+    
+    
+    
+    
+    
+            
+            <div id="cash-withdrawal-screen" class="section screen">
+                <h1>Enter Withdrawal Amount</h1>
+    
+                <div style="text-align: center;">
+                    <input type="number" name="amount" id="withdrawal-amount" placeholder="Amount" class="withdrawal-amount">
+                </div>
+                
+                <button onclick="showScreen('main')">Back</button>
+                <button id="withdrawalButton">Withdraw</button>
+    
+                <p style="margin-top: 3rem; font-size: 2rem; font-family: monospace;" class="hide" id="withdrawalMessage">Withdraw</p>
+            </div>
+            
+            
+    
+    
+    
+            <div id="cash-deposit-screen" class="section screen">
+                <h1>Enter Deposit Amount</h1>
+                
+                <div style="text-align: center;">
+                    <input type="number" name="amount" id="deposit-amount" placeholder="Amount" class="amount">
+                </div>
+    
+    
+                <button onclick="showScreen('main')">Back</button>
+                <button id="depositButton">Send</button>
+    
+                <p style="margin-top: 3rem; font-size: 2.5rem; font-family: monospace;" class="hide" id="depositMessage">send</p>
+            </div>
+    
+    
+    
+    
+            <div id="quickteller-screen" class="section screen">
+                <h1>Enter Beneficiary Details</h1>
+                
+    
+    
+                <select name="network" id="network-provider">
+                        <option style="text-align: center;" value="none">Choose Network</option>
+                        <option value="MTN">MTN</option>
+                        <option disabled>______________</option>
+                        <option value="Airtel">Airtel</option>
+                        <option disabled>______________</option>
+                        <option value="Glo">Glo</option>
+                        <option disabled>______________</option>
+                        <option value="Etisalat">Etisalat</option>
+                </select>
+    
+                <div style="text-align: center; margin: 0;">                
+    
+    
+                    <input style="margin: 0;" type="number" name="number" id="phoneNumber" placeholder="Enter Number" class="airtime">
+                    <input style="margin: 0; margin-left: 3rem; width: 8rem;" type="number" name="number" id="airtimeAmount" placeholder="Amount" class="airtimeAmount">
+                </div>
+    
+                <button onclick="showScreen('main')">Back</button>
+                <button id="airtimeButton">Send</button>
+    
+                <p style="margin-top: 2rem; font-size: 2rem; font-family: monospace;" class="hide" id="airtimeMessage">Airtime Purchase Complete</p>
+            </div>
+    
+    
+    
+    
+            <div id="change-password-screen" class="section screen">
+                <h1>Enter New Password</h1>
+    
+                <div style="text-align: center;">
+                    <input type="password" name="password" id="new-password" placeholder="Enter New Password" class="new-password" maxlength="4">
+                </div>
+                
+                <button onclick="showScreen('main')">Back</button>
+                <button id="passwordButton">Enter</button>
+    
+    
+                <p style="margin-top: 3rem; font-size: 2.5rem; font-family: monospace;" class="hide" id="passwordMessage">Updated</p>
+            </div>
+    
+    
+    
+    
+            <div class="footer">
+                <a href="./index.html"><button>&#8592; Home</button></a>
+                <button id="clearStorageButton">Exit All</button>
+            </div>
+    
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>

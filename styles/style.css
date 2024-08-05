@@ -1,0 +1,287 @@
+@font-face {
+    font-family: myParFont;
+    src: url(../asset/fonts/Alkatra/Alkatra-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: myHeadFont;
+    src: url(../asset/fonts/BonaNovaSC-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'myParFont';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.new-container-overlay {
+    background-image: url(../asset/bk-gd-atm.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* .overlay {
+    position: absolute;
+    top: -1rem;
+    height: 50rem;
+    width: 100%;
+    background-color: #0b607a;
+    opacity: 95%;
+    z-index: -2;
+} */
+.container {
+    /* max-width: 1440px; */
+    margin: auto;
+    /* z-index: 2; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 15px; */
+    padding: 0 3rem;
+
+    p {
+        color: #fff;
+        font-size: 1.7rem;
+    }
+
+}
+
+.section {
+    margin: auto;
+    width: 90%;
+    height: 45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5rem;
+    
+    /* margin-top: 7rem;
+    margin-bottom: 7rem; */
+}
+
+.leftSection {
+    color: white;
+    width: 45%;
+    
+    h1 {
+        margin-top: -2rem;
+        font-size: 4.5rem;
+        font-family: 'myHeadFont';
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: justify;
+        line-height: 3rem;
+    }
+
+    input {
+        height: 4rem;
+        width: 30rem;
+        border: none;
+        border-radius: 20px;
+        /* margin-top: 2rem; */
+        background-image: linear-gradient(rgb(14, 115, 146), rgb(6, 65, 83));
+        color: #fff;
+        
+
+    }
+
+    input::placeholder {
+        font-size: 1.5rem;
+        text-align: center;
+        color: rgb(157, 193, 224);
+
+    }
+
+    input:focus {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .error {
+        border: 3px solid red;
+        background-image: none;
+        background-color: rgb(204, 77, 77);
+    }
+
+}
+
+
+
+
+
+.rightSection {
+    width: 40%;
+    padding-left: 30px;
+}
+
+.footer {
+    /* margin-top: 5rem; */
+    padding: 0 4rem;
+    height: 8rem;
+    background-color: rgb(3, 61, 78);
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
+    border-top: 2px ridge;
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        border: none;
+        /* margin-left: 6rem; */
+        cursor: pointer;
+        width: 13rem;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+
+    .section {
+        padding-left: 1rem;
+    }
+
+    .leftSection {
+        width: 55%;
+        
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .leftSection {
+        width: 75%;
+
+    }
+    
+
+    .rightSection {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 685px) {
+
+    .header {
+        padding-top: 15px;
+        p {
+            display: none;
+        }
+    }
+
+    .section {
+        height: 44rem;
+    }
+    
+    .leftSection {
+        width: 75%;
+
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        input {
+            width: 20rem;
+            margin-top: 1rem;
+        }
+
+    }
+    
+
+}
+
+
+@media screen and (max-width: 432px) {
+
+    body {
+        background-color: rgb(3, 61, 78);
+    }
+
+    .new-container-overlay {
+        background-image: none;
+    }
+    .section {
+        /* height: 43.55rem; */
+        height: 100vh;
+        margin: 10rem 0;
+    }
+
+    .leftSection {
+        width: 90%;
+
+        
+    
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        input {
+            width: 15rem;
+            margin-left: 0.8rem;
+        }
+    }
+
+    .footer {
+        padding-left: 2rem;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-height: 809px) {
+
+    .section {
+        height: 32.35rem;
+    }
+
+    .leftSection {
+        width: 55%;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+}
